@@ -1,25 +1,14 @@
-import { useSearchParams } from 'react-router';
 import { rooms } from '../data/rooms';
-import {
-  defaultFilters,
-  filterRooms,
-  parseRoomFilters,
-} from '../domain/filters';
+import { defaultFilters, filterRooms } from '../domain/filters';
 import { formatMoney } from '../domain/money';
 import { usePreferences } from '../app/PreferencesContext';
 import RoomCard from '../components/RoomCard';
+import useRoomFilters from '../features/catalog/useRoomFilters';
 import { Arrow, Heart } from '../components/Icons';
 export default function Rooms() {
-  const [search, setSearch] = useSearchParams();
-  const filters = parseRoomFilters(search);
+  const { filters, change, resetFilters } = useRoomFilters();
   const { preferences } = usePreferences();
   const matching = filterRooms(rooms, filters, preferences.savedRoomIds);
-  const change = (key: string, value: string) => {
-    const next = new URLSearchParams(search);
-    if (!value) next.delete(key);
-    else next.set(key, value);
-    setSearch(next, { replace: true });
-  };
   return (
     <div className="shell collection-page">
       <div className="collection-heading">
@@ -90,7 +79,7 @@ export default function Rooms() {
           into
         </p>
         <div>
-          <button className="plain-button" onClick={() => setSearch({})}>
+          <button className="plain-button" onClick={resetFilters}>
             Reset filters
           </button>
           <label className="sort-filter">
@@ -133,7 +122,7 @@ export default function Rooms() {
               ? 'Tap a heart on a room you love, and find it here.'
               : 'Try another amenity, a higher budget, or fewer guests.'}
           </p>
-          <button className="button" onClick={() => setSearch({})}>
+          <button className="button" onClick={resetFilters}>
             Explore all rooms <Arrow />
           </button>
         </div>
