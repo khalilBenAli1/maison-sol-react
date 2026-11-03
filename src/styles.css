@@ -1606,6 +1606,8 @@ label > select:not(.stay-field select) {
 .confirmation > p:not(.eyebrow) {
   font-size: 14px;
   color: var(--muted);
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 .confirmation-ticket {
   background: var(--white);
