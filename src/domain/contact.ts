@@ -10,7 +10,9 @@ export function validateContact(contact: ContactDetails): ContactErrors {
     errors.name = 'Please enter a name between 2 and 100 characters.';
   if (
     contact.email.length > 254 ||
-    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact.email.trim())
+    !/^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9.-]+\.[a-z0-9.-]+$/i.test(
+      contact.email.trim(),
+    )
   )
     errors.email = 'Please enter a valid email address.';
   if (!contact.consent)

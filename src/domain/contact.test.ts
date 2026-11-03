@@ -1,6 +1,26 @@
 import { describe, expect, it } from 'vitest';
 import { validateContact } from './contact';
 describe('demo contact validation', () => {
+  it.each(['alex<smith>@example.com', 'alex,smith@example.com'])(
+    'rejects unsupported punctuation in an unquoted email: %s',
+    (email) => {
+      expect(
+        validateContact({ name: 'Léa Ben Ali', email, consent: true }),
+      ).toHaveProperty('email');
+    },
+  );
+  it.each(['alex.smith+stay@example.com', "o'connor+stay@example.co.uk"])(
+    'preserves supported plus and dot addresses: %s',
+    (email) => {
+      expect(
+        validateContact({
+          name: ' Léa Ben Ali ',
+          email: ` ${email} `,
+          consent: true,
+        }),
+      ).toEqual({});
+    },
+  );
   it('accepts trimmed sample details and international names', () =>
     expect(
       validateContact({
