@@ -22,3 +22,7 @@ Verified 2026-11-03 with Node 22.23.1 and npm 10.9.8.
 ## Booking separation verification
 
 The user-requested step/orchestration extraction passed all 50 unit tests and 27 browser journeys, including the new review-edit-remount regression on all three browser projects. Independent code review found no behavior/state-boundary regressions. Fixed-clock before/after desktop (1440×1000) and mobile (390×844) booking screenshots have identical pixels; see `booking-visual-comparison.json`. No CSS, date/money rules, persistence behavior or dependencies changed.
+
+## Narrow long-contact correction
+
+A valid unbroken 100-character guest name reproduced confirmation overflow at390px. The targeted thank-you paragraph now wraps within its container. The regression checks both review and confirmation using `documentElement.clientWidth`; layout assertions and capture reports also use that stable layout-viewport measure. All six focused Chromium/mobile/WebKit long-contact and multi-width journeys pass. Normal design is unchanged; no overflow is hidden.

@@ -375,7 +375,7 @@ test('key layouts reflow at 390, 768 and 1440 pixels without horizontal overflow
         await openRoute(page, route);
         const dimensions = await page.evaluate(() => ({
           content: document.documentElement.scrollWidth,
-          viewport: window.innerWidth,
+          viewport: document.documentElement.clientWidth,
         }));
         expect(dimensions.content).toBeLessThanOrEqual(dimensions.viewport);
       });

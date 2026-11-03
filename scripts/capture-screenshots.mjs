@@ -48,7 +48,9 @@ try {
       fullPage,
       errors,
       overflow: await page.evaluate(
-        () => document.documentElement.scrollWidth > innerWidth,
+        () =>
+          document.documentElement.scrollWidth >
+          document.documentElement.clientWidth,
       ),
       imageFailures: await page
         .locator('img')
