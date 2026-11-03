@@ -1,0 +1,74 @@
+[
+  {
+    "name": "home-desktop",
+    "width": 1440,
+    "height": 1000,
+    "fullPage": false,
+    "errors": [],
+    "overflow": false,
+    "imageFailures": []
+  },
+  {
+    "name": "home-mobile",
+    "width": 390,
+    "height": 844,
+    "fullPage": false,
+    "errors": [],
+    "overflow": false,
+    "imageFailures": []
+  },
+  {
+    "name": "home-full",
+    "width": 1440,
+    "height": 1000,
+    "fullPage": true,
+    "errors": [],
+    "overflow": false,
+    "imageFailures": []
+  },
+  {
+    "name": "rooms-desktop",
+    "width": 1440,
+    "height": 1000,
+    "fullPage": true,
+    "errors": [],
+    "overflow": false,
+    "imageFailures": []
+  },
+  {
+    "name": "rooms-mobile",
+    "width": 390,
+    "height": 844,
+    "fullPage": false,
+    "errors": [],
+    "overflow": false,
+    "imageFailures": []
+  },
+  {
+    "name": "room-desktop",
+    "width": 1440,
+    "height": 1000,
+    "fullPage": false,
+    "errors": [],
+    "overflow": false,
+    "imageFailures": []
+  },
+  {
+    "name": "booking-desktop",
+    "width": 1440,
+    "height": 1000,
+    "fullPage": false,
+    "errors": [],
+    "overflow": false,
+    "imageFailures": []
+  },
+  {
+    "name": "booking-mobile",
+    "width": 390,
+    "height": 844,
+    "fullPage": false,
+    "errors": [],
+    "overflow": false,
+    "imageFailures": []
+  }
+]
