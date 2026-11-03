@@ -1,0 +1,32 @@
+{
+  "mode": "built-in ImageGen",
+  "created": "2026-11-03",
+  "notes": "Fictional hotel/property imagery. Hero reused from the approved original portfolio photography generated on 2026-11-01. New room images generated separately, one call per room. Sharp used only for proportional resizing and WebP encoding.",
+  "prompts": [
+    {
+      "name": "hotel-hero",
+      "created": "2026-11-01",
+      "prompt": "Use case: photorealistic-natural. Asset type: wide hero photograph for a fictional boutique-hotel UI concept. A serene Mediterranean coastal boutique hotel in late afternoon, pale limestone architecture with a long low terrace, turquoise infinity pool, sculptural olive trees and a calm blue sea beyond. Refined understated hospitality, natural stone and linen textures, authentic architectural photography rather than a fantasy resort. Wide16:9 landscape composition with clear depth and a generous view of pool and sea; soft luminous sunlight, warm cream and muted sea-teal palette. No people, no words, no signage, no logos, no watermark. Fictional property, concept photography."
+    },
+    {
+      "name": "olive-room",
+      "prompt": "Use case: photorealistic-natural. Asset type: original room photograph for a fictional luxury hotel frontend named Maison Sol. Create a single wide landscape 3:2 editorial architecture photograph. Scene: a calm Mediterranean hotel bedroom with a low king bed in ivory linen, olive green cushions, warm pale plaster walls, a small doorway opening onto an olive-tree courtyard, natural timber bedside table and ceramic lamp, linen curtains, light limestone floor; a modest intimate double bedroom. Style: natural high-end hospitality editorial photography, believable architecture, tactile linen, subtle natural imperfections, warm late-afternoon sunlight, balanced exposure, muted ivory, olive, honey stone and deep teal palette. Composition: wide room view at realistic eye level, keep architecture vertical, show the whole useful room arrangement, no exaggerated fisheye. Constraints: no people, no text, no logos, no lettering, no watermarks, no inset panels or collages. This is one image of one fictional room.",
+      "created": "2026-11-03"
+    },
+    {
+      "name": "terrace-suite",
+      "prompt": "Use case: photorealistic-natural. Asset type: original room photograph for a fictional luxury hotel frontend named Maison Sol. Create a single wide landscape 3:2 editorial architecture photograph. Scene: a spacious Mediterranean hotel bedroom with king bed in ivory linen, open full-height doors onto a private limestone terrace overlooking a deep blue sea, woven lounge chairs outside, honey-colored limestone walls and warm timber furniture; understated luxury and a visible sea horizon. Style: natural high-end hospitality editorial photography, believable architecture, tactile linen, subtle natural imperfections, warm late-afternoon sunlight, balanced exposure, muted ivory, olive, honey stone and deep teal palette. Composition: wide room view at realistic eye level, keep architecture vertical, show the whole useful room arrangement, no exaggerated fisheye. Constraints: no people, no text, no logos, no lettering, no watermarks, no inset panels or collages. This is one image of one fictional room.",
+      "created": "2026-11-03"
+    },
+    {
+      "name": "garden-studio",
+      "prompt": "Use case: photorealistic-natural. Asset type: original room photograph for a fictional luxury hotel frontend named Maison Sol. Create a single wide landscape 3:2 editorial architecture photograph. Scene: a Mediterranean garden-facing studio with an ivory linen double bed and a separate built-in daybed suitable for one additional guest, a small oak breakfast table, woven textures, soft sage details, French doors opening onto a lush quiet private garden; warm pale plaster and limestone flooring. Style: natural high-end hospitality editorial photography, believable architecture, tactile linen, subtle natural imperfections, warm late-afternoon sunlight, balanced exposure, muted ivory, olive, honey stone and deep teal palette. Composition: wide room view at realistic eye level, keep architecture vertical, show the whole useful room arrangement, no exaggerated fisheye. Constraints: no people, no text, no logos, no lettering, no watermarks, no inset panels or collages. This is one image of one fictional room.",
+      "created": "2026-11-03"
+    },
+    {
+      "name": "sol-residence",
+      "prompt": "Use case: photorealistic-natural. Asset type: original room photograph for a fictional luxury hotel frontend named Maison Sol. Create a single wide landscape 3:2 editorial architecture photograph. Scene: a spacious Mediterranean villa residence living area with a deep linen sofa, warm timber dining table, a broad opening to a limestone courtyard and small plunge pool, a glimpse through two separate doorways to two bedrooms, honey stone and ivory plaster; airy family villa scale with understated handcrafted furniture. Style: natural high-end hospitality editorial photography, believable architecture, tactile linen, subtle natural imperfections, warm late-afternoon sunlight, balanced exposure, muted ivory, olive, honey stone and deep teal palette. Composition: wide room view at realistic eye level, keep architecture vertical, show the whole useful room arrangement, no exaggerated fisheye. Constraints: no people, no text, no logos, no lettering, no watermarks, no inset panels or collages. This is one image of one fictional room.",
+      "created": "2026-11-03"
+    }
+  ]
+}
