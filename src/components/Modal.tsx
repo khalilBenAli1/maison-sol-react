@@ -25,8 +25,10 @@ export default function Modal({
       ref={ref}
       className={`modal ${className}`}
       aria-label={title}
-      onCancel={onClose}
-      onClose={onClose}
+      onCancel={(event) => {
+        event.preventDefault();
+        onClose();
+      }}
       onClick={(event) => {
         if (event.target === event.currentTarget) onClose();
       }}

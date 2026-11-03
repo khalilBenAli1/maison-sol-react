@@ -26,3 +26,9 @@ The user-requested step/orchestration extraction passed all 50 unit tests and 27
 ## Narrow long-contact correction
 
 A valid unbroken 100-character guest name reproduced confirmation overflow at390px. The targeted thank-you paragraph now wraps within its container. The regression checks both review and confirmation using `documentElement.clientWidth`; layout assertions and capture reports also use that stable layout-viewport measure. All six focused Chromium/mobile/WebKit long-contact and multi-width journeys pass. Normal design is unchanged; no overflow is hidden.
+
+## Rapid interaction regressions
+
+Two deterministic browser cases failed before the correction: delayed native close notifications could dismiss a newly reopened menu, and same-turn filter changes retained only the final sort query. Modal state now follows explicit dismissal intent. A focused typed URL bridge merges pending filter changes until the router commits and handles external history navigation.
+
+All six focused race journeys pass on desktop Chromium, mobile Chromium and WebKit, including Escape/focus restoration and filter reload/back navigation. Existing pure rules and the visual design are unchanged. The focus assertion uses keyboard activation explicitly, since Safari mouse-click focus is platform-defined.
