@@ -15,7 +15,7 @@ Built in November 2026 as a fictional-brand portfolio application. All rooms, av
 - Recoverable stay preferences; contact details are never persisted or transmitted.
 - Subtle motion with reduced-motion support and locally bundled imagery/fonts.
 
-Live demo: publication verification pending. The verified URL will be added after deployment.
+**[Explore the live experience](https://khalilbenali1.github.io/maison-sol-react/)** · [Source repository](https://github.com/khalilBenAli1/maison-sol-react)
 
 ## Run locally
 

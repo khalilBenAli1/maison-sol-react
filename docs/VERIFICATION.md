@@ -10,4 +10,11 @@ Verified 2026-11-03 with Node 22.23.1 and npm 10.9.8.
 - Actual production screenshots are in `docs/screenshots`. Run `node scripts/capture-screenshots.mjs` with the preview running to reproduce them. Its capture report records browser errors, overflow and failed images.
 - Production build passes; lazy route bundles are separate. The main bundle is approximately 235 kB uncompressed / 74 kB gzip; shared routing chunk 48 kB / 17 kB; CSS 40 kB / 8.5 kB. Full and small WebP image variants total 987,480 bytes across all rooms/hero. These are build measurements, not invented Lighthouse scores.
 
-GitHub CI and live deployment evidence will be appended after their runs complete.
+## Publication evidence
+
+- Release PR [#1](https://github.com/khalilBenAli1/maison-sol-react/pull/1) passed both push and PR checks.
+- Main commit `755fd31eb6a4ed4839a401fc6490cc20b5919c8c` passed [quality and Pages deployment](https://github.com/khalilBenAli1/maison-sol-react/actions/runs/41560987494).
+- Public HTML and hero image returned HTTP 200. The hero has `image/webp` content type.
+- Three critical browser journeys also passed against the deployed URL: collection filters/saved/reset, direct room/gallery/refresh, and the complete validated booking with exact totals/contact privacy.
+- Verified free demo: [Maison Sol](https://khalilbenali1.github.io/maison-sol-react/). Production dependency audit: zero findings.
+- This final documentation-only update does not change the application behavior.

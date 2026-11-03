@@ -29,3 +29,7 @@ Started 2026-11-03. An original fictional hotel frontend, using the approved ivo
 - Gallery and menu support keyboard/Escape/focus restoration. Primary flow works without a pointer.
 - Lint, formatting, strict typecheck, domain tests, browser journeys and build pass locally and on GitHub.
 - Screenshots at 390, 768 and 1440 pixels; no horizontal overflow. Record actual payloads, not invented performance scores.
+
+## Completed evidence
+
+All five milestones completed on 2026-11-03. See `docs/VERIFICATION.md` for checks, live browser verification and deployment provenance. Meaningful implementation history was preserved through a merge PR.
