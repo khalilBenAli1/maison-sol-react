@@ -41,3 +41,5 @@ flowchart TD
 ```
 
 The bounded extraction preserved the semantic DOM, styles and interaction copy. Regression coverage includes review edits and recalculated totals, contact retention between steps, contact clearing after route remount, reset behavior and immutable confirmation.
+
+The project-local `.npmrc` explicitly enables standard peer resolution (`legacy-peer-deps=false`). This keeps installation consistent with CI even on a host with a permissive global npm setting. The committed lockfile installs cleanly under the pinned Node/npm baseline.
