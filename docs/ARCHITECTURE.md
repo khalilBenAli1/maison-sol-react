@@ -19,3 +19,25 @@ This frontend demonstrates booking UX, not a real hotel inventory system. Local 
 Automated accessibility scans and keyboard checks are evidence for the tested routes, not WCAG certification or a replacement for assistive-technology review. Browser testing covers current Chromium and WebKit; Firefox and physical-device screen readers were not tested.
 
 The initial dependency audit reported a minimatch glob amplification advisory in development-only ESLint dependencies. Production dependency audit is recorded separately in verification. No forced major transitive override is used to obtain a clean audit; upstream tool updates should be reviewed before refreshing the lockfile.
+
+## Booking feature boundaries
+
+`pages/Booking.tsx` composes the route heading, step navigation and feature views. `features/booking/useBookingFlow.ts` owns this mounted journey's transient step, contact, errors and confirmation, exposing typed actions instead of raw setters. It derives availability and totals once from source draft state through pure domain rules. Contact validation lives in `domain/contact.ts`; it has no React, DOM or storage dependency.
+
+The dates, room selection, details and review views each render their own responsibility. The route owns heading focus; the details view owns its form ref and invalid-field focus. Summary and confirmation render supplied values, without calculating prices or accessing storage. The immutable confirmation snapshot is a feature type.
+
+Only the existing preferences provider owns genuinely shared dates/guest/room and saved-room identifiers. It reaches the versioned persistence adapter; feature views and pure domain rules never read browser storage. Contact inputs remain feature-local so they survive backward edits within the journey but disappear on route unmount/reload. Dialog open state remains local to its UI.
+
+```mermaid
+flowchart TD
+  Route[Booking route] --> Views[Focused step views]
+  Route --> Flow[Typed booking flow hook]
+  Views --> Actions[Typed feature actions]
+  Actions --> Flow
+  Flow --> Rules[Pure date, money and contact rules]
+  Flow --> Preferences[Shared non-sensitive preferences]
+  Preferences --> Persistence[Versioned validated storage adapter]
+  Flow --> Transient[Feature-local contact and immutable confirmation]
+```
+
+The bounded extraction preserved the semantic DOM, styles and interaction copy. Regression coverage includes review edits and recalculated totals, contact retention between steps, contact clearing after route remount, reset behavior and immutable confirmation.
