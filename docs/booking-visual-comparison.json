@@ -1,0 +1,12 @@
+[
+  {
+    "view": "desktop",
+    "identical_pixels": true,
+    "dimensions": [1440, 1000]
+  },
+  {
+    "view": "mobile",
+    "identical_pixels": true,
+    "dimensions": [390, 844]
+  }
+]

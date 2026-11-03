@@ -1,16 +1,9 @@
 import { Link } from 'react-router';
 import { useEffect, useRef } from 'react';
-import type { BookingDraft, Room } from '../domain/types';
-import { formatDate } from '../domain/dates';
-import { formatMoney, type StayTotals } from '../domain/money';
-import { Arrow, Sun } from './Icons';
-export interface ConfirmedStay {
-  reference: string;
-  firstName: string;
-  room: Room;
-  draft: BookingDraft;
-  totals: StayTotals;
-}
+import { formatDate } from '../../domain/dates';
+import { formatMoney } from '../../domain/money';
+import type { ConfirmedStay } from './types';
+import { Arrow, Sun } from '../../components/Icons';
 export default function StayConfirmation({
   stay,
   onRestart,
